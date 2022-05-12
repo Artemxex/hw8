@@ -2,8 +2,8 @@ public class Main {
 
     //Задача 1
 
-    private static void visok(double year) {
-        if (year % 4 == 0 && year % 100 != 0) {
+    private static void opredelitVisokosny(double year) {
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println(year + " - високосный год");
         } else {
             System.out.println(year + " - не високосный год");
@@ -12,7 +12,7 @@ public class Main {
     }
     //Задача 2
 
-    private static void device(int year, int OC) {
+    private static void opredelitDevice(int year, int OC) {
         int currentYear = 2022;
         if (OC == 0) {
             if (year < currentYear) {
@@ -30,30 +30,31 @@ public class Main {
     }
     //Задача 3
 
-    private static int delivery(int distance) {
+    private static int opredelitDelivery(int distance) {
+        int dostavka = 0;
         if (distance > 20) {
             if (distance > 60) {
-                System.out.println("Потребуется 3 дня для доставки");
+                dostavka = 3;
             } else {
-                System.out.println("Потребуется 2 дня для доставки");
+                dostavka = 2;
             }
         } else {
-            System.out.println("Потребуется 1 день для доставки");
+            dostavka = 1;
         }
-        return 0;
+        return dostavka;
     }
 
     public static void main(String[] args) {
         //Задача 1
 
-        visok(2004);
+        opredelitVisokosny(2004);
 
         //Задача 2
 
-        device(2021, 0);
+        opredelitDevice(2021, 0);
 
         //Задача 3
 
-        delivery(24);
+        System.out.println("Доставка займёт " + opredelitDelivery(21) + " дня");
     }
 }
