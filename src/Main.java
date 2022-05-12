@@ -5,7 +5,9 @@ public class Main {
     private static void visok(double year) {
         if (year % 4 == 0 && year % 100 != 0) {
             System.out.println(year + " - високосный год");
-        } else System.out.println(year + " - не високосный год");
+        } else {
+            System.out.println(year + " - не високосный год");
+        }
 
     }
     //Задача 2
@@ -30,8 +32,9 @@ public class Main {
 
     private static int delivery(int distance) {
         if (distance > 20) {
-            if (distance > 60) System.out.println("Потребуется 3 дня для доставки");
-            else {
+            if (distance > 60) {
+                System.out.println("Потребуется 3 дня для доставки");
+            } else {
                 System.out.println("Потребуется 2 дня для доставки");
             }
         } else {
